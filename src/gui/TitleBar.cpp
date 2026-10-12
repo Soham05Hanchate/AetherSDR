@@ -1449,7 +1449,7 @@ void TitleBar::showFeatureRequestDialog()
                             "<p>Your issue may already be fixed in the latest release. "
                             "Please update before filing a bug report.</p>"
                             "<p>Continue anyway?</p>")
-                        .arg(QCoreApplication::applicationVersion(), latest),
+                        .arg(QCoreApplication::applicationVersion(), latest.toString().toHtmlEscaped()),
                     QMessageBox::Yes | QMessageBox::No, QMessageBox::No);
                 if (answer != QMessageBox::Yes) return;
             }
